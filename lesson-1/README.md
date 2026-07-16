@@ -1,0 +1,1 @@
+<img src="../exercises/lesson-1-part-1.png" alt="Texto Alternativo" width="200">
