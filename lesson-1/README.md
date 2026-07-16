@@ -1,1 +1,2 @@
-<img src="../exercises/lesson-1-part-1.png" alt="Texto Alternativo" width="200">
+<img src="/exercises/part-1.png" alt="" width="2560" height="1440">
+<img src="/exercises/part-2.png" alt="" width="2560" height="1440">
