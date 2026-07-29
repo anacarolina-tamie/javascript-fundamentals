@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+</head>
+
+<body>
+  <script>
+    const result1 = convertLength(5, 'miles', 'km');
+    const result2 = convertLength(5, 'miles', 'ft');
+    const result3 = convertLength(5, 'km', 'ft');
+    const result4 = convertLength(50, 'ft', 'ft');
+    const result5 = convertLength(50, 'ft', 'km');
+
+    console.log(result1);
+    console.log(result2);
+    console.log(result3);
+    console.log(result4);
+    console.log(result5);
+
+    function convertLength(length, from, to) {
+      if (from === 'miles') {
+        if (to === 'km') {
+          const result = length * 1.6;
+          return `${result} km`;
+        } else if (to === 'miles') {
+          const result = length;
+          return `${result} miles`;
+        } else if (to === 'ft') {
+          const result = length * 5280;
+          return `${result} ft`;
+        } else {
+          return 'Please enter in a valid format'
+        }
+
+      } else if (from === 'km') {
+        if (to === 'miles') {
+          const result = length / 1.6;
+          return `${result} miles`;
+        } else if (to === 'km') {
+          const result = length;
+          return `${result} km`;
+        } else if (to === 'ft') {
+          const result = length * 3281;
+          return `${result} ft`;
+        } else {
+          return 'Please enter in a valid format'
+        } 
+
+      } else if (from === 'ft') {
+        if (to === 'miles') {
+          const result = length / 5280;
+          return `${result} miles`;
+        } else if (to === 'km') {
+          const result = length / 3281;
+          return `${result} km`;
+        } else if (to === 'ft') {
+          const result = length;
+          return `${result} ft`;
+        } else {
+          return 'Please enter in a valid format'
+        }
+
+      } else {
+          return 'Please enter in a valid format'
+      }
+    }
+
+  </script>
+</body>
+
+</html>
