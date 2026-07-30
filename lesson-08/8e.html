@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+  </head>
+
+  <body>
+    <script>
+      const productA = {
+        name: 'shampoo',
+        price: 5000
+      };
+
+      const productB= {
+        name: 'shampoo',
+        price: 5000
+      };
+
+      const productC = {
+        name: 'toothbrush',
+        price: 5000
+      }
+
+      console.log(isSameProduct(productA, productB));
+      console.log(isSameProduct(productA, productC));
+
+      function isSameProduct(product1, product2) {
+        if (product1.name === product2.name && product1.price === product2.price) {
+          return true;
+        } 
+        return false;
+      }
+    </script>
+  </body>
+
+</html>

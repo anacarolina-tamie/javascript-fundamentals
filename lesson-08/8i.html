@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head></head>
+
+  <body>
+
+    <button onclick="console.log(playGame('heads'));">
+      Heads
+    </button>
+    <button onclick="console.log(playGame('tails'))">
+      Tails
+    </button>
+
+    <script>
+      function playGame(playerMove) {
+        const randomNumber = Math.random();
+
+        console.log(randomNumber);
+
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        if (playerMove === result) {
+          const message = `You choose: ${playerMove}. Result: ${result}. You win!`
+          return message;
+        }
+        const message = `You choose: ${playerMove}. Result: ${result}. You lose!`
+        return message;
+      }
+
+    </script>
+  </body>
+
+</html>

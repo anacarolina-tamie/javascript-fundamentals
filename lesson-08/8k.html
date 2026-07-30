@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+<head></head>
+
+<body>
+
+  <button onclick="
+    console.log(playGame('heads'));
+    ">
+    Heads
+  </button>
+  <button onclick="
+    console.log(playGame('tails'));
+    ">
+    Tails
+  </button>
+
+  <script>
+
+    const score = JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0 };
+
+    function playGame(playerMove) {
+      const randomNumber = Math.random();
+
+      console.log(randomNumber);
+
+      const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+      console.log(playerMove === result ? `You choose: ${playerMove}. Result: ${result}. You win!` : `You choose: ${playerMove}. Result: ${result}. You lose!`);
+
+      if (playerMove === result) {
+        score.wins++;
+      } else {
+        score.losses++;
+      }
+      //transformando o objeto score em uma string
+      const JSONscore = JSON.stringify(score, null, 0);
+      //salvando a string no localstorage
+      localStorage.setItem('score', JSONscore);
+
+      console.log(score);
+    }
+
+  </script>
+</body>
+
+</html>

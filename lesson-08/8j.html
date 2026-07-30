@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head></head>
+
+  <body>
+
+    <button onclick="
+      console.log(playGame('heads'));
+      console.log(score);
+      ">
+      Heads
+    </button>
+    <button onclick="
+    console.log(playGame('tails'))
+    console.log(score);">
+      Tails
+    </button>
+
+    <script>
+
+      const score = {
+        wins: 0,
+        losses: 0
+      }
+
+      function playGame(playerMove) {
+        const randomNumber = Math.random();
+
+        console.log(randomNumber);
+
+        const result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+        if (playerMove === result) {
+          const message = `You choose: ${playerMove}. Result: ${result}. You win!`
+          score.wins++;
+          return message;
+
+        }
+        const message = `You choose: ${playerMove}. Result: ${result}. You lose!`
+        score.losses++;
+        return message;
+      }
+
+    </script>
+  </body>
+
+</html>
