@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+<head></head>
+
+<body>
+  <button onclick="addClickA()">
+    Click A
+  </button>
+  <button onclick="addClickB()">
+    Click B
+  </button>
+  <script>
+    let clickQuantity = JSON.parse(localStorage.getItem('clickQuantity')) || { clickA: 0, clickB: 0 };
+    console.log(`Initial quantity: ${JSON.stringify(clickQuantity, null, 4)}`);
+
+    function addClickA() {
+      clickQuantity.clickA++;
+      console.log(`Click counter: ${JSON.stringify(clickQuantity, null, 5)}`);
+      localStorage.setItem('clickQuantity', JSON.stringify(clickQuantity));
+    }
+
+    function addClickB() {
+      clickQuantity.clickB++;
+      console.log(`Click counter: ${JSON.stringify(clickQuantity, null, 5)}`);
+      localStorage.setItem('clickQuantity', JSON.stringify(clickQuantity));
+    }
+  </script>
+</body>
+
+</html>

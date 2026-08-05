@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head></head>
+
+<body>
+  <button onclick="returnToPreviousLevel()">
+    Previous level
+  </button>
+  <button onclick=" passToNextLevel();">
+    Next level
+  </button>
+  <script>
+    const playerStats = JSON.parse(localStorage.getItem('playerStats')) || {name: 'Ana', power: 'Water', hp: 80, level: 3}
+
+    console.log(playerStats);
+
+    function passToNextLevel() {
+      playerStats.level++;
+      console.log(playerStats);
+      localStorage.setItem('playerStats', JSON.stringify(playerStats));
+    }
+
+    function returnToPreviousLevel() {
+      if (playerStats.level - 1 > 0) {
+        playerStats.level--;
+        console.log(playerStats);
+        localStorage.setItem('playerStats', JSON.stringify(playerStats));
+      } else {
+        console.log(`You can't go to a level lower than 0`);
+      }
+    }
+  </script>
+</body>
+
+</html>
