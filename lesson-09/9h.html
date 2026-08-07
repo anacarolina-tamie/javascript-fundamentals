@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html>
+  <head></head>
+  <body>
+    <input class="js-input" onkeyup="updateText()">
+    <p class="js-text"></p>
+    <script>
+      function updateText() {
+        const inputElement = document.querySelector('.js-input');
+        const textElement = document.querySelector('.js-text');
+        textElement.innerHTML = inputElement.value;
+      }
+    </script>
+  </body>
+</html>

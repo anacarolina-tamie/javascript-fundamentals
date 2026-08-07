@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+  <head></head>
+
+  <body>
+    <button onclick="identifyPlayerChoice('heads');">
+      heads
+    </button>
+    <button onclick="identifyPlayerChoice('tails');">
+      tails
+    </button>
+    <p class="js-player-choice"></p>
+
+    <script>
+      function identifyPlayerChoice(playerChoice) {
+        const playerChoiceElement = document.querySelector('.js-player-choice');
+        playerChoiceElement.innerHTML = `You choose ${playerChoice}`;
+      }
+    </script>
+  </body>
+</html>
