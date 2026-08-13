@@ -1,0 +1,19 @@
+body {
+  font-family: Arial;
+}
+
+body button{
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gaming-button {
+  background-color: rgb(235, 235, 235);
+}
+
+.is-toggled {
+  color: white;
+  background-color: black;
+}

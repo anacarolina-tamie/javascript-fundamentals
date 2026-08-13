@@ -1,0 +1,21 @@
+body {
+  font-family: Arial;
+}
+
+body button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.request-now-button {
+  background-color: black;
+  color: white;
+  margin-right: 10px;
+}
+
+.schedule-button {
+  background-color: rgb(230, 230, 230);
+}
