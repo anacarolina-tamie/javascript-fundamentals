@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <style>
+    .task {
+      display: flex;
+      align-items: first baseline;
+    }
+
+    .task p {
+      margin-right: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="js-error"></p>
+  <h2>To-do list</h2>
+  <div class="js-todo-tasks todo-tasks"></div>
+  <input class="js-input" placeholder="Ex: Make dinner">
+  <button onclick="addTask()">
+    Add
+  </button>
+  <h2>Done</h2>
+  <div></div>
+
+  <script>
+    const inputElement = document.querySelector('.js-input');
+    function addTask() {
+      if (inputElement.value) {
+        const todoTasksElement = document.querySelector('.js-todo-tasks');
+        todoTasksElement.innerHTML += `<div class="task"> <p>${inputElement.value}</p> <button>Done</button> </div>`;
+        inputElement.value = '';
+      } else {
+        const errorElement = document.querySelector('.js-error');
+        errorElement.innerHTML = 'Type the task name';
+      }
+        
+    }
+
+  </script>
+</body>
+
+</html>
